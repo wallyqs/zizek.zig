@@ -1,0 +1,28 @@
+{
+  "source_commit": "2075ba2b5ddc3b1b1e679bb32d3f50c256aee5ec",
+  "package_files": [
+    "CHANGELOG.md",
+    "GUIDE.md",
+    "LICENSE",
+    "README.md",
+    "build.zig",
+    "build.zig.zon",
+    "databasecases_gen_test.zig",
+    "dev.md",
+    "docs/assets/zizek-zig-logo-dark.svg",
+    "docs/assets/zizek-zig-logo.svg",
+    "drawops_gen_test.zig",
+    "examples/die_hard.zig",
+    "examples/hypothesis_quickstart.zig",
+    "examples/ledger.zig",
+    "examples/min_stack.zig",
+    "examples/multi.zig",
+    "examples/stack.zig",
+    "generators.zig",
+    "shell.zig",
+    "shellcases_gen_test.zig",
+    "stateful.zig",
+    "zizek.zig",
+    "zizek_gen.zig"
+  ]
+}

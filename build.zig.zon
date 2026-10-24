@@ -1,0 +1,21 @@
+.{
+    .name = .zizek,
+    .version = "0.1.0",
+    .fingerprint = 0xa8e27d4e6bbf4bf9,
+    .minimum_zig_version = "0.16.0",
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "generators.zig",
+        "shell.zig",
+        "stateful.zig",
+        "zizek.zig",
+        "zizek_gen.zig",
+        "examples",
+        "README.md",
+        "GUIDE.md",
+        "dev.md",
+        "CHANGELOG.md",
+        "LICENSE",
+    },
+}
