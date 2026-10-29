@@ -26,7 +26,7 @@ Zig. [dev.md](dev.md) describes the split.
 The package builds with Zig 0.16 and 0.17. Fetch it into your `build.zig.zon`:
 
 ```bash
-zig fetch --save git+https://github.com/wallyqs/zizek.zig
+zig fetch --save git+https://github.com/wallyqs/zizek.zig#v0.1.1
 ```
 
 or name a local checkout as a path dependency:

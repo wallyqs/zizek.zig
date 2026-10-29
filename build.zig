@@ -31,6 +31,13 @@ pub fn build(b: *std.Build) void {
     test_module.addAnonymousImport("database_cases", .{
         .root_source_file = b.path("../../conformance/database/database_cases.tsv"),
     });
+    // The generated readers for those tables are test-only modules too, so
+    // they stay out of the published package.
+    for ([_][]const u8{ "drawops_gen_test", "shellcases_gen_test", "databasecases_gen_test" }) |reader| {
+        test_module.addAnonymousImport(reader, .{
+            .root_source_file = b.path(b.fmt("{s}.zig", .{reader})),
+        });
+    }
     const tests = b.addTest(.{ .root_module = test_module });
     const run_tests = b.addRunArtifact(tests);
     // `zig build test -Dverbose-tests` hands the runner the terminal, so it

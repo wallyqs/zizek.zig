@@ -5,6 +5,14 @@ All notable changes to the Zig package are recorded here. The format follows
 [semantic versioning](https://semver.org/spec/v2.0.0.html) — while the version
 is `0.x`, the API may change in any release.
 
+## [0.1.1] - 2026-10-28
+
+### Fixed
+
+- Projects that depend on the fetched package build again. The 0.1.0 package
+  imported its test-only conformance readers by file path, and since those
+  files are not shipped, every dependent build failed with `FileNotFound`.
+
 ## [0.1.0] - 2026-10-28
 
 First release of the Zig package.
@@ -34,4 +42,5 @@ First release of the Zig package.
 
 - Targets Zig 0.16, and also builds with Zig 0.17.
 
+[0.1.1]: https://github.com/wallyqs/zizek.zig/releases/tag/v0.1.1
 [0.1.0]: https://github.com/wallyqs/zizek.zig/releases/tag/v0.1.0

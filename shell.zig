@@ -1,8 +1,10 @@
 const std = @import("std");
 const core = @import("zizek_gen.zig");
-const drawops = @import("drawops_gen_test.zig");
-const shellcases = @import("shellcases_gen_test.zig");
-const databasecases = @import("databasecases_gen_test.zig");
+// The generated conformance readers are modules that only the test build
+// provides, so the public module never loads them.
+const drawops = @import("drawops_gen_test");
+const shellcases = @import("shellcases_gen_test");
+const databasecases = @import("databasecases_gen_test");
 
 /// The allocator this shell and the generated core allocate from.
 ///

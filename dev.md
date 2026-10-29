@@ -30,6 +30,11 @@ it. The [README](README.md) covers installation and the basics, and
 - `shellcases_gen_test.zig`, `drawops_gen_test.zig`, and
   `databasecases_gen_test.zig` are generated readers for the shared
   conformance tables. Like `zizek_gen.zig`, they are not edited by hand.
+  `shell.zig` imports them by module name, and only the test build in
+  `build.zig` provides those modules: Zig loads every file named in an
+  `@import` path even from test-only code, but resolves a module name only
+  when it is used. So the public module never loads them, and they are left
+  out of the `.paths` in `build.zig.zon`.
 - `examples/` holds the runnable native and upstream-port examples;
   `examples/ledger.zig` is the end-to-end acceptance example.
 
